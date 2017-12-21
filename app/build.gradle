@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+
+    defaultConfig {
+        applicationId "com.bwie.huang.shoppingcar1"
+        minSdkVersion 18
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    //OkHttp依赖
+    //RecyclerView依赖
+    //SpringView依赖
+    //glide加载图片
+    //OKhttp拦截器
+    //gson依赖
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    compile 'com.liaoinstan.springview:library:1.2.6'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.android.support:support-v4:26.0.0-alpha1'
+
+}
